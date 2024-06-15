@@ -4,7 +4,14 @@
     {
         string AddInvoice();
 
-        string AddVehicle();
+        string AddVehicle(
+            string typeVehicle,
+            string brand,
+            string model,
+            decimal valueVehicle,
+            DateTime returnDate,
+            DateTime reservationStartDate,
+            DateTime reservationEndDate);
 
         string CalculateValue();
 

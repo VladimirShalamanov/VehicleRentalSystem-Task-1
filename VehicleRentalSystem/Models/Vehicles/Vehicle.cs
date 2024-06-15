@@ -13,13 +13,6 @@
         private DateTime reservationStartDate;
         private DateTime reservationEndDate;
 
-        protected Vehicle(string brand, string model, decimal valueVehicle)
-        {
-            this.brand = brand;
-            this.model = model;
-            this.valueVehicle = valueVehicle;
-        }
-
         protected Vehicle(
             string brand,
             string model,

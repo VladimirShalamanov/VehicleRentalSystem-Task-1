@@ -13,5 +13,7 @@
         public const string InvalidRiderAge = "Rider age is invalid.";
 
         public const string InvalidDriverExperience = "Driver experience must be a positive number.";
+
+        public const string InvalidVehicleType = "Invalid vehicle type.";
     }
 }
