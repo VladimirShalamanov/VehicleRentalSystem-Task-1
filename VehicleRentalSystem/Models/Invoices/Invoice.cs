@@ -6,10 +6,9 @@
     using VehicleRentalSystem.Models.Invoices.Contracts;
     using VehicleRentalSystem.Models.Vehicles.Contracts;
 
-    //public abstract class Invoice : IInvoice
     public class Invoice : IInvoice
     {
-        private Invoice()
+        public Invoice()
         {
             this.RentalVehicles = new HashSet<IVehicle>();
         }

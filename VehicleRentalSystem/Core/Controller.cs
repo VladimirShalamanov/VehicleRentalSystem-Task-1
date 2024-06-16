@@ -1,6 +1,7 @@
 ﻿namespace VehicleRentalSystem.Core
 {
     using VehicleRentalSystem.Core.Contracts;
+    using VehicleRentalSystem.Models.Invoices;
     using VehicleRentalSystem.Models.Vehicles;
     using VehicleRentalSystem.Models.Vehicles.Contracts;
     using VehicleRentalSystem.Repositories;
@@ -9,11 +10,13 @@
 
     public class Controller : IController
     {
-        private readonly VehicleRepository vehicles;
+        private VehicleRepository vehicles;
+        private Invoice invoice;
 
         public Controller()
         {
             this.vehicles = new VehicleRepository();
+            this.invoice = new Invoice();
         }
 
         public string AddInvoice()
@@ -21,14 +24,7 @@
             throw new NotImplementedException();
         }
 
-        public string AddVehicle(
-            string typeVehicle,
-            string brand,
-            string model,
-            decimal valueVehicle,
-            DateTime returnDate,
-            DateTime reservationStartDate,
-            DateTime reservationEndDate)
+        public void AddVehicle(string typeVehicle)
         {
             IVehicle vehicle;
 
@@ -70,17 +66,13 @@
                 throw new InvalidOperationException(ExceptionMessages.InvalidVehicleType);
             }
 
-            // here - add invoice (akvarium)
-        }
-
-        public string CalculateValue()
-        {
-            throw new NotImplementedException();
+            this.vehicles.Add(vehicle);
+            this.invoice.AddVehicle(vehicle);
         }
 
         public string Report()
         {
-            throw new NotImplementedException();
+            return this.invoice.GetInfo();
         }
     }
 }

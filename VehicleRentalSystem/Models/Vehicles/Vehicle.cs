@@ -77,6 +77,20 @@
 
         public DateTime ReservationEndDate { get; private set; }
 
-        public abstract void someAction();
+        public abstract int ReservedDays();
+
+        public abstract int ActualDays();
+
+        public abstract decimal RentalCostPerDay();
+
+        public abstract decimal InitInsurancePerDay();
+
+        public abstract decimal UpdateInsurancePerDay();
+
+        public abstract decimal InsurancePerDay();
+
+        public abstract decimal EarlyDiscountRent();
+
+        public abstract decimal EarlyDiscountInsurance();
     }
 }

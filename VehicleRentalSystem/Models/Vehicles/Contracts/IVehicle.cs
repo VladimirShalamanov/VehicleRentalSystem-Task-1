@@ -13,5 +13,21 @@
         DateTime ReservationStartDate { get; }
 
         DateTime ReservationEndDate { get; }
+
+        int ReservedDays();
+
+        int ActualDays();
+
+        decimal RentalCostPerDay();
+
+        decimal InitInsurancePerDay();
+
+        decimal UpdateInsurancePerDay();
+
+        decimal InsurancePerDay();
+
+        decimal EarlyDiscountRent();
+
+        decimal EarlyDiscountInsurance();
     }
 }

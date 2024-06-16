@@ -22,30 +22,29 @@
 
         public void Run()
         {
-            string[] typesForInvoice = Inputs.TypesVehicles.Split(", ");
+            // Example inputs for the Demo NOT real user data for production environment
+            string[] typesVehicle = Inputs.TypesVehicles.Split(", ");
 
-            foreach (string type in typesForInvoice)
+            for (int i = 0; i < typesVehicle.Length; i++)
             {
                 try
                 {
-                    
+                    this.controller.AddVehicle(typesVehicle[i]);
+
+                    if (i == typesVehicle.Length - 1)
+                    {
+                        writer.WriteLine(this.controller.Report());
+
+                        Environment.Exit(0);
+                    }
                 }
                 catch (Exception ex)
                 {
                     writer.WriteLine(ex.Message);
                 }
             }
-            // print
 
-
-            //DateTime r = DateTime.Parse(Inputs.CargoVanReturnDate);
-            //DateTime s = DateTime.Parse(Inputs.CargoVanReservationStartDate);
-            //DateTime e = DateTime.Parse(Inputs.CargoVanReservationEndDate);
-
-
-            //var diff = e - s;
             //Console.WriteLine(r.ToString("yyyy-MM-dd"));
-            //Console.WriteLine(diff.Days);
         }
     }
 }

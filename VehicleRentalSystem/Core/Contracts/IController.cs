@@ -4,16 +4,7 @@
     {
         string AddInvoice();
 
-        string AddVehicle(
-            string typeVehicle,
-            string brand,
-            string model,
-            decimal valueVehicle,
-            DateTime returnDate,
-            DateTime reservationStartDate,
-            DateTime reservationEndDate);
-
-        string CalculateValue();
+        void AddVehicle(string typeVehicle);
 
         string Report();
     }
