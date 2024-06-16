@@ -1,13 +1,11 @@
 ﻿namespace VehicleRentalSystem.Models.Invoices
 {
-    using System.Collections.Generic;
     using System.Text;
+    using System.Collections.Generic;
 
     using VehicleRentalSystem.Models.Invoices.Contracts;
-    using VehicleRentalSystem.Models.Vehicles;
     using VehicleRentalSystem.Models.Vehicles.Contracts;
     using VehicleRentalSystem.Repositories;
-    using VehicleRentalSystem.Utilities.CostManagement;
 
     public class Invoice : IInvoice
     {

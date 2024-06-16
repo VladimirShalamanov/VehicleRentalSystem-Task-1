@@ -1,10 +1,8 @@
 ﻿namespace VehicleRentalSystem.Core
 {
-
     using VehicleRentalSystem.IO;
     using VehicleRentalSystem.IO.Contracts;
     using VehicleRentalSystem.Core.Contracts;
-
     using VehicleRentalSystem.Utilities.ExampleInputs;
 
     public class Engine : IEngine
@@ -43,8 +41,6 @@
                     writer.WriteLine(ex.Message);
                 }
             }
-
-            //Console.WriteLine(r.ToString("yyyy-MM-dd"));
         }
     }
 }

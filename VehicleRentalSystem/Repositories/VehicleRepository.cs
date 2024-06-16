@@ -1,9 +1,10 @@
 ﻿namespace VehicleRentalSystem.Repositories
 {
+    using System.Linq;
+    using System.Collections.Generic;
+
     using VehicleRentalSystem.Repositories.Contracts;
     using VehicleRentalSystem.Models.Vehicles.Contracts;
-    using System.Collections.Generic;
-    using System.Linq;
 
     public class VehicleRepository : IRepository<IVehicle>
     {
