@@ -20,6 +20,6 @@
 
         public bool Remove(IVehicle model) => this.models.Remove(model);
 
-        public IVehicle FindByType(string type) => this.models.FirstOrDefault(m => m.GetType().Name == type);
+        public IVehicle FindByType(string type) => this.models.FirstOrDefault(m => m.GetType().Name == type)!;
     }
 }

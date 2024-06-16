@@ -35,7 +35,7 @@
                     Inputs.CarModel,
                     Inputs.CarValue,
                     DateTime.Parse(Inputs.CarReturnDate),
-                    DateTime.Parse(Inputs.CarReservationEndDate),
+                    DateTime.Parse(Inputs.CarReservationStartDate),
                     DateTime.Parse(Inputs.CarReservationEndDate),
                     Inputs.CarSecurityRating);
             }

@@ -103,7 +103,7 @@
 
             if (initInsurancePerDay != 0m && updateInsurancePerDay != 0m)
             {
-                insurancePerDay = initInsurancePerDay + updateInsurancePerDay;
+                insurancePerDay = initInsurancePerDay - updateInsurancePerDay;
             }
             else
             {
@@ -139,14 +139,14 @@
             {
                 int reservedDays = ReservedDays();
                 int actualDays = ActualDays();
-                decimal rentalCostPerDay = RentalCostPerDay();
+                decimal insurancePerDay = InsurancePerDay();
 
                 int daysWithoutRent = reservedDays - actualDays;
 
-                earlyDiscountInsurance = rentalCostPerDay * daysWithoutRent;
+                earlyDiscountInsurance = daysWithoutRent * insurancePerDay;
             }
 
-            return earlyDiscountRent;
+            return earlyDiscountInsurance;
         }
     }
 }
