@@ -16,5 +16,7 @@
         public const int CheckDriverExperiencePositiveNumber = 0;
         public const int MinDriverExperience = 5;
 
+        // One week Rule
+        public const int OneWeek = 7;
     }
 }
